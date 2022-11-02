@@ -1,0 +1,96 @@
+/*-----Geral-----*/
+
+*{
+    background-color: black;
+    font-family: sans-serif;
+    color: white;
+}
+
+/*-----Navegação-----*/
+
+a{
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+a:hover{
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animacao{
+    0%{
+        padding-left: 0px;
+    }
+    50% {
+        padding-left: 15px;
+    }
+    100%{
+        padding-left: 0px;
+    }
+}
+
+/*-----Conteudo-----*/
+
+div{
+    text-align: center;
+}
+
+span{
+    margin: 5px;
+}
+
+#concluido{
+    color: greenyellow;
+}
+
+#fazer{
+    color: lightsteelblue;
+}
+
+#pendencia{
+    color: red;
+}
+
+#ok{
+    color: greenyellow;
+}
+
+#ocorrencia::-webkit-progress-bar{
+    background: green;
+}
+
+#ocorrencia::-webkit-progress-value {
+    background: red;
+}
+
+/*-----Tabela-----*/
+
+table{
+    margin-top: 20px;
+    width: 100%;
+    background-color: gray;
+    border-collapse: collapse;
+}
+
+thead{
+    border-top: 16px solid rgb(0, 0, 0);
+    border-bottom: 5px solid black;
+    position: sticky;
+    top: 0;
+}
+
+tr{
+    line-height: 5vh;
+}
+
+th{
+    background-color: gray;
+    color: rgb(22, 44, 66);
+}
+
+td{
+    text-align: center;
+    border-bottom: 1px solid gray;
+}

@@ -1,0 +1,295 @@
+/*-----Geral-----*/
+
+*{
+    font-family: sans-serif;
+    color: white;
+}
+
+body{
+    background-color: black;
+}
+
+/*-----Tabela-----*/
+
+table{
+    margin-top: 20px;
+    width: 100%;
+    background-color: gray;
+    border-collapse: collapse;
+}
+
+thead{
+    border-top: 16px solid rgb(0, 0, 0);
+    border-bottom: 5px solid black;
+    position: sticky;
+    top: 0;
+}
+
+tr{
+    line-height: 5vh;
+}
+
+th{
+    background-color: gray;
+    color: rgb(22, 44, 66);
+}
+
+td{
+    text-align: center;
+    border-bottom: 1px solid gray;
+    background-color: black;
+}
+
+/*-----Navegação-----*/
+
+form{
+    float: right;
+}
+
+label:hover{
+    cursor: pointer;
+}
+
+/*-----Componentes-----*/
+
+button,a{
+    cursor: pointer;
+    background-color: green;
+    border-radius: 7px;
+    text-decoration: none;
+    padding: 5px;
+    margin: 0px 5px;
+}
+
+button:hover,a:hover{
+    color:black;
+    background-color: greenyellow;
+}
+
+textarea{
+    margin-top: 5px;
+    width: 95%;
+    background-color: rgb(22, 44, 66);
+    resize: vertical;
+}
+
+input{
+    background-color: rgb(22, 44, 66);
+    border-radius: 4px;
+}
+
+nobr{
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(22, 44, 66);
+}
+
+s{
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(22, 44, 66);
+}
+
+a#editar{
+    background-color: mediumblue;
+}
+
+a#editar:hover{
+    background-color: cyan;
+}
+
+s{
+    text-decoration-color: white;
+}
+
+/*-----Mapa-----*/
+
+a.mapa{
+    background-color: black;
+    padding: 0px;
+}
+
+i{
+    color: darkred;
+    padding: 10px;
+}
+
+i:hover{
+    color: red;
+}
+
+/*-----Footer-----*/
+
+footer{
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+/*-----teste-----*/
+
+label{
+    background: transparent;
+}
+
+.search{
+    padding: 10px;
+    color: #eee;
+    background: linear-gradient(
+        to bottom right,
+        green, mediumblue);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+}
+
+.search :is(input, button){
+    color: inherit;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.search_input{
+    width: 0;
+    transition: width .7s;
+}
+
+.search_btn{
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.search:focus-within input{
+    width: 200px;
+}
+
+/* 
+::placeholder{
+    color: inherit;
+} 
+*/
+
+.ri-search{
+    background: transparent;
+}
+
+/*-----nav-----*/
+
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+#header{
+    justify-content: space-between;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 1rem;
+}
+
+#menu{
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+}
+
+#menu a{
+    display: block;
+    padding: .5rem; 
+}
+#btn-mobile{
+    display: none;
+    font-size: 16px;
+    padding: 8px;
+    margin: 0px 5px;
+}
+
+@media (max-width: 735px){
+
+    #menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background-color: gray;
+        height: 0px;
+        z-index: 1;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active #menu{
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu a{
+        padding: 1rem .5rem;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+        background-color: rgba(0, 0, 0, 0);
+        border-radius: 0px;
+    }
+
+    #menu a:hover{
+        color: rgb(22, 44, 66);
+        background-color: rgba(0, 0, 0, .1);
+    }
+
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+
+    #nav.active #btn-mobile{
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    #btn-mobile:hover{
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    #hamburger{
+        color: white;
+        border-top: 2px solid;
+        width: 20px;
+        display: block;
+    }
+
+    #hamburger::after, #hamburger::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.active #hamburger{
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburger::before{
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburger::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
