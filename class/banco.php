@@ -10,11 +10,6 @@ class Banco
 
     public function __construct()
     {
-        //$nome = 'epiz_32002380_preventiva';
-        //$user = 'epiz_32002380';
-        //$senha = 'oQBmp84Ze1Im0W';
-        //$host = 'sql110.epizy.com';
-        
         $nome = 'preventiva';
         $user = 'root';
         $senha = '';
